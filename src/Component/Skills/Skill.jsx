@@ -20,7 +20,7 @@ import dsa from './logo/dsa.jpg'
 const Skill = () => {
   return (
     <>
-      <div className='dark:text-white max-w-[900px] mx-auto lg:px-10 ' >
+      <div className='dark:text-white max-w-[900px] mx-auto lg:px-10 overflow-hidden' >
         <h1 className='text-center text-4xl font-semibold underline underline-offset-4 mt-20'>Skills</h1>
         <h2 className='text-center  text-2xl opacity-70 mt-2'>My <span className='text-[#ee39ff] '>Technical Skills</span></h2>
         <div className='flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-4 mt-5 border-2 rounded-md dark:border-gray-600 py-6 lg:px-6 dark:bg-transparent bg-gray-100 shadow-2xl'

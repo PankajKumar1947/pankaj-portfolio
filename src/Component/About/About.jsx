@@ -4,17 +4,17 @@ import profilewhite from '../Assests/profileWhite.png'
 const About = () => {
   return (
     <>
-        <div className=' max-w-[1080px] mx-auto dark:text-white flex lg:flex-nowrap md:flex-nowrap mt-20 flex-wrap md:gap-5'>
+        <div className=' max-w-[1080px] mx-auto dark:text-white flex lg:flex-nowrap md:flex-nowrap mt-20 flex-wrap '>
             {/* left */}
             <div className='lg:max-h-[80vh]  hidden lg:block md:block select-none' 
             data-aos="fade-right">
                 
-                <img src={profilewhite} alt="" className='lg:h-[85%] h-[80%]  rounded-md dark:bg-black bg-gray-400 ' />
+                <img src={profilewhite} alt="" className='lg:h-[85%] h-[80%]  dark:bg-black bg-gray-400 rounded-2xl ' />
             </div>
             {/* right */}
             <div className='lg:w-[65%] md:w-[55%] ' data-aos="fade-left">
                 <h2 className='text-3xl font-semibold underline underline-offset-8'>About <span className='text-[#86198f]'>Me</span></h2>
-                <ul className='leading-6 mt-4 dark:text-gray-300 list-disc'>
+                <ul className='leading-6 mt-4 dark:text-gray-300 list-disc pl-4 md:pl-0'>
                     <li >Second-Year CSE Undergraduate Student At Asansol Engineering College.</li>
                     <li>Along With A Wonderful Team, I Lead Various Projects, Hackathons And Communities. I am A Self-Taught Developer With a Passion for Web Developmetn And Problem Solving in Data Structure and Algorithm.</li>
                     <li>I Have A Strong Background In Software Devlopment And Have Worked On a Wide Variety Of Projects.</li>
