@@ -4,7 +4,7 @@ import profile from '../Assests/profileWhite.png'
 const Hero = () => {
   return (
     <>
-        <div className='max-w-[1080px] mx-auto dark:text-white  flex flex-wrap-reverse w-full items-center mt-20 justify-center lg:gap-5 md:gap-10 gap-20  lg:justify-between'  >
+        <div className='max-w-[1080px] mx-auto dark:text-white  flex flex-wrap-reverse w-full items-center mt-10 lg:mt-20 justify-center lg:gap-5 md:gap-10 gap-16  lg:justify-between'  >
             {/* left */}
             <div className='lg:w-[60%] md:w-[50%] ' data-aos="fade-down">
                 <h3 className='text-2xl dark:text-gray-300 text-gray-800 font-serif'>👋Hi, I'm Pankaj Kumar</h3>
@@ -17,7 +17,7 @@ const Hero = () => {
             </div>
 
             {/* right */}
-            <div className='lg:w-[30%] md:w-[40%] rounded-full shadow-2xl shadow-blue-500'
+            <div className='lg:w-[30%] md:w-[40%] w-[80%] rounded-full shadow-2xl shadow-blue-500'
             data-aos="fade-left">
                 <img src={profile} alt="" className='w-[100%] rounded-full dark:bg-black bg-gray-400 shadow-2xl dark:shadow-blue-500 shadow-black'/>
                 

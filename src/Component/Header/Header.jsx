@@ -25,12 +25,12 @@ const Header = () => {
 
   return (
     <>
-        <div className='sticky top-0 pt-1  dark:bg-[rgb(18,19,24)] bg-gray-200  z-10 '>
+        <div className='sticky top-0 pt-1  dark:bg-[rgb(18,19,24)] bg-gray-200  z-10 overflow-x-hidden'>
             <nav className=' max-w-[1080px] mx-auto dark:text-white flex justify-between mt-2 items-center select-none border-b-2 border-blue-700 pb-2 '>
                 <div>
                     <h1 className='text-3xl font-bold bg-gradient-to-r from-red-600 via-indigo-500 to-blue-600 inline-block text-transparent bg-clip-text'>Pankaj</h1>
                 </div>
-                <ul className='flex gap-4 lg:gap-6 items-center  '>
+                <ul className='flex gap-1 md:gap-4 lg:gap-6 items-center  '>
                     <li >
                         <NavLink
                         to="/"
@@ -88,8 +88,8 @@ const Header = () => {
                         </NavLink>
                     </li>
 
-                    <li>
-                        <button className='bg-indigo-600 hover:bg-blue-600 px-3 text-white  py-1 rounded-md  lg:block md:block hidden'>Hire Me</button>
+                    <li className='lg:block md:block hidden'>
+                        <button className='bg-indigo-600 hover:bg-blue-600 px-3 text-white  py-1 rounded-md  '>Hire Me</button>
                     </li>
 
                     <li className='text-xl cursor-pointer dark:bg-[#334155] bg-white rounded-full p-2'

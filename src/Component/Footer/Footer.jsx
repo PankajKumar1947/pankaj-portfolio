@@ -28,7 +28,7 @@ const Footer = () => {
               <p className='mt-2'>Copyright  2023 : All right reserved</p>
               
         </div>
-        <p className='flex justify-center items-center gap-1 p-2 dark:bg-gray-900 dark:text-cyan-400 bg-gray-400 w-full'>Designed with <span className='text-red-700 text-2xl '> &#9829; </span> by Pankaj </p>
+        <p className='flex justify-center items-center gap-1 p-2 dark:bg-gray-900 dark:text-cyan-400 bg-gray-400 w-full'>Designed with <span className='text-red-700 text-xl '> &#9829; </span> by Pankaj </p>
     </>
   )
 }

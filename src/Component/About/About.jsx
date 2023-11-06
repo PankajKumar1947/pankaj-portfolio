@@ -9,7 +9,7 @@ const About = () => {
             <div className='lg:max-h-[80vh]  hidden lg:block md:block select-none' 
             data-aos="fade-right">
                 
-                <img src={profilewhite} alt="" className='lg:h-[85%]  rounded-md dark:bg-black bg-gray-400 ' />
+                <img src={profilewhite} alt="" className='lg:h-[85%] h-[80%]  rounded-md dark:bg-black bg-gray-400 ' />
             </div>
             {/* right */}
             <div className='lg:w-[65%] md:w-[55%] ' data-aos="fade-left">

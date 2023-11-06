@@ -24,7 +24,7 @@ const Layout = () => {
     <>
       <ThemeProvider value={{themeMode,lightTheme,darkTheme}}>
         <div className='dark:bg-[rgb(18,19,24)] bg-gray-200'>
-          <div className='mx-10 '>
+          <div className='mx-3 md:mx-10 overflow-x-hidden '>
               <Header/>
               <Outlet/>
               
