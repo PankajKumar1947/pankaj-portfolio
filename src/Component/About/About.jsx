@@ -20,7 +20,7 @@ const About = () => {
                     <li>I Have A Strong Background In Software Devlopment And Have Worked On a Wide Variety Of Projects.</li>
                 </ul>
 
-              <div className="mt-6 flex gap-2 text-xl">
+              <div className="mt-6 flex gap-3 justify-center text-xl">
                 <i className="fa-brands fa-facebook fa-lg text-[#005eff] cursor-pointer" ></i>
                 <i className="fa-brands fa-linkedin fa-lg hover:text-[#075ae9] cursor-pointer" ></i>
                 <i className="fa-solid fa-envelope fa-lg hover:text-[#187728] cursor-pointer" ></i>
