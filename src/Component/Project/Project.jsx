@@ -12,7 +12,7 @@ const Project = () => {
             <p className='text-center dark:text-gray-300 text-gray-700 mt-4 text-md mb-5 '>Some of my Projects made during learning and Currently Working</p>
 
             {/* card added */}
-            <div className='flex flex-wrap gap-10 lg:gap-4 justify-center items-center'>
+            <div className='flex flex-wrap gap-10 lg:gap-4 justify-center items-center px-3'>
                 <Card name="Razorpay Clone" image={razorpay} desc="Designed clone of landing page of Razarpay using tailwind"/>
                 <Card name="PhysicsWallah Clone" image={pw} desc="Designed clone of landing page of PhysicsWallah using tailwind"/>
                 <Card name="Discord Landingpage Clone" image={discord} desc="Designed clone of landing page of Discord using tailwind"/>
