@@ -18,11 +18,22 @@ const Contact = () => {
             </div>
 
             {/* right */}
-            <div className='flex  flex-wrap p-5 dark:bg-gray-800 bg-white flex-1 gap-4 rounded-xl ' >
-                <input type="text" placeholder='Enter your Name...'  className='bg-transparent border-2 border-gray-600  rounded-md w-full lg:w-[48%] px-2 py-1 h-fit'/>
-                <input type="text" placeholder='Enter your Email...' className='bg-transparent border-2 border-gray-600 rounded-md w-full lg:w-[49%] px-2 py-1 h-fit'/>
-                <textarea type="form" placeholder='Message...' className='w-[100%] bg-transparent border-2 border-gray-600  rounded-md  px-2 h-[30%] lg:h-[50%]' />
-                <button className='bg-cyan-500 hover:bg-cyan-600 px-3  py-2 rounded-md h-fit'>Let's Talk</button>
+            <div className='flex  flex-wrap p-3 lg:p-5 dark:bg-gray-800 bg-white flex-1 gap-4 rounded-xl ' >
+              <div className='relative w-full lg:w-[48%]  '>
+                <i className="fa-solid fa-user  absolute left-3 top-5 transform -translate-y-1/2"></i>
+                <input type="text" placeholder='Name...'  className='bg-transparent border-2 border-gray-600  rounded-md  pl-9 py-2 w-full  '/>
+              </div>
+              <div className='relative w-full lg:w-[48%]  '>
+                <i className="fa-solid fa-envelope  absolute left-3 top-5 transform -translate-y-1/2"></i>
+                <input type="text" placeholder='Email...'  className='bg-transparent border-2 border-gray-600  rounded-md  pl-9 py-2 w-full  '/>
+              </div>
+              <div className='relative w-full h-[30%] lg:h-[50%]'>
+                <i className="fa-brands fa-rocketchat  absolute left-3 top-5 transform -translate-y-1/2"></i>
+                <textarea placeholder='Message...' className='w-[100%] bg-transparent border-2 border-gray-600 rounded-md py-1 h-full  pl-9 '/>
+              </div>
+              
+                {/* <textarea type="form" placeholder='Message...' className='w-[100%] bg-transparent border-2 border-gray-600  rounded-md  px-2 h-[30%] lg:h-[50%]' /> */}
+                <button className='bg-cyan-500 hover:bg-cyan-600 px-3  py-2 rounded-md '>Let's Talk</button>
             </div>
         </div>
       </div>

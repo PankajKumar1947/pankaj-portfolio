@@ -13,9 +13,9 @@ const Project = () => {
 
             {/* card added */}
             <div className='flex flex-wrap gap-10 lg:gap-4 justify-center items-center px-3'>
-                <Card name="Razorpay Clone" image={razorpay} desc="Designed clone of landing page of Razarpay using tailwind"/>
-                <Card name="PhysicsWallah Clone" image={pw} desc="Designed clone of landing page of PhysicsWallah using tailwind"/>
-                <Card name="Discord Landingpage Clone" image={discord} desc="Designed clone of landing page of Discord using tailwind"/>
+                <Card name="Razorpay Clone" linkView={"https://github.com/PankajKumar1947"} repoLink={"https://github.com/PankajKumar1947"} image={razorpay} desc="Designed clone of landing page of Razarpay using tailwind"/>
+                <Card name="PhysicsWallah Clone" linkView={"https://pankajkumar1947.github.io/pw-landingPage-clone/"} repoLink={"https://github.com/PankajKumar1947/pw-landingPage-clone"} image={pw} desc="Designed clone of landing page of PhysicsWallah using tailwind"/>
+                <Card name="Discord Landingpage Clone" linkView={"https://pankajkumar1947.github.io/Discord-landing-Page/"} repoLink={"https://github.com/PankajKumar1947/Discord-landing-Page"} image={discord} desc="Designed clone of landing page of Discord using tailwind"/>
             </div>
             
         </div>

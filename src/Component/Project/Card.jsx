@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Card = (props) => {
-
   return (
     <>
         <div className='dark:text-white w-full md:w-[40%] lg:w-[30%] p-3 dark:bg-gray-900 bg-white rounded-xl  shadow-lg shadow-gray-700 hover:scale-105 duration-500  cursor-pointer group' 
@@ -24,8 +23,8 @@ const Card = (props) => {
 
             <div className='hidden group-hover:block '>
                 <div className='text-center flex  gap-2 absolute top-[50%] left-[25%] '>
-                    <a href="" className='flex text-sm items-center gap-0.5 bg-yellow-500 text-center text-black py-1 px-2 rounded-md hover:bg-green-900'><img  src="https://img.icons8.com/material/24/visible--v1.png" alt="visible--v1"/>View</a>
-                    <a href="" className='flex text-sm items-center gap-0.5 bg-yellow-500 text-center text-black py-1 px-2 rounded-md hover:bg-green-900'><img width="23" height="23" src="https://img.icons8.com/pastel-glyph/64/source-code--v3.png" alt="source-code--v3"/>Code</a>
+                    <a href={props.linkView || defLink} className='flex text-sm items-center gap-0.5 bg-yellow-500 text-center text-black py-1 px-2 rounded-md hover:bg-green-900'><img  src="https://img.icons8.com/material/24/visible--v1.png" alt="visible--v1"/>View</a>
+                    <a href={props.repoLink  || defRepo} className='flex text-sm items-center gap-0.5 bg-yellow-500 text-center text-black py-1 px-2 rounded-md hover:bg-green-900'><img width="23" height="23" src="https://img.icons8.com/pastel-glyph/64/source-code--v3.png" alt="source-code--v3"/>Code</a>
                     
                 </div>
             </div>

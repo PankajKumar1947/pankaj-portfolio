@@ -7,7 +7,7 @@ const Hero = () => {
 
   return (
     <>
-        <div className='max-w-[1080px] mx-auto dark:text-white  flex flex-wrap-reverse w-full items-center mt-10 lg:mt-20 justify-center lg:gap-5 md:gap-10 gap-16  lg:justify-between'  >
+        <div className='max-w-[1080px] mx-auto dark:text-white  flex flex-wrap-reverse w-full items-center mt-20 justify-center lg:gap-5 md:gap-10 gap-16  lg:justify-between'  >
             {/* left */}
             <div className='lg:w-[60%] md:w-[50%] ' data-aos="fade-down">
                 <h3 className='text-2xl dark:text-gray-300 text-gray-800 font-serif'>👋Hi, I'm Pankaj Kumar</h3>
