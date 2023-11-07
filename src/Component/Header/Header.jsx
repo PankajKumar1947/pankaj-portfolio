@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <>
-        <div className='fixed w-full mx-auto px-3 md:px-10 lg:px-16 top-0 pt-1 bg-opacity-50 dark:bg-opacity-10  dark:bg-[rgb(25,25,26)] bg-gray-300  z-10   ... backdrop-filter backdrop-blur-lg border-b-2 border-blue-700 '>
+        <div className='fixed w-full mx-auto px-3 md:px-10 lg:px-16 top-0 pt-1 bg-opacity-10 dark:bg-opacity-10  dark:bg-[rgb(25,25,26)] bg-gray-300  z-10   ... backdrop-filter backdrop-blur-lg border-b-2 border-blue-700 '>
             <nav className=' dark:text-white flex justify-between mt-2 items-center select-none  pb-2 '>
                 <div>
                     <h1 className='text-3xl font-bold bg-gradient-to-r from-red-600 via-indigo-500 to-blue-600 inline-block text-transparent bg-clip-text'>Pankaj</h1>
