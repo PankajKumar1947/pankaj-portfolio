@@ -4,7 +4,7 @@ import profilewhite from '../Assests/profileWhite.png'
 const About = () => {
   return (
     <>
-        <div className=' max-w-[1080px] mx-auto dark:text-white flex lg:flex-nowrap md:flex-nowrap mt-20 flex-wrap '>
+        <div className=' max-w-[1080px] mx-auto dark:text-white flex lg:flex-nowrap md:flex-nowrap mt-20 flex-wrap font-abc '>
             {/* left */}
             <div className='lg:max-h-[80vh]  hidden lg:block md:block select-none' 
             data-aos="fade-right">

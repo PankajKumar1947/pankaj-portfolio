@@ -7,6 +7,10 @@ export default {
   darkMode:"class",
   theme: {
     extend: {},
+    fontFamily: {
+      abc: ['Mooli', 'serif'],
+      poppins:['Poppins','serif']
+    },
   },
   plugins: [],
 }

@@ -23,7 +23,7 @@ const Layout = () => {
   return (
     <>
       <ThemeProvider value={{themeMode,lightTheme,darkTheme}}>
-        <div className='dark:bg-[rgb(18,19,24)] bg-gray-200 '>
+        <div className='dark:bg-[rgb(18,19,24)] bg-gray-200 font-poppins '>
         <Header/>
           <div className='mx-3 md:mx-10 overflow-x-hidden '>
               
