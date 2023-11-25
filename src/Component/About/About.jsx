@@ -32,7 +32,7 @@ const About = () => {
               <div className='w-full bg-gray-500 h-[1px] mt-6'></div>
                 
               <h1 className='text-2xl mt-2'>Personal Info</h1>
-              <div className='mt-2 grid grid-cols-2'>
+              <div className='mt-2 grid grid-cols-2 text-sm'>
                     <h2 className='dark:text-gray-400 text-gray-700'>Name : <span className=' dark:text-gray-300 text-gray-950'>Pankaj Kumar</span></h2>
                     <h2 className='dark:text-gray-400 text-gray-700'>Age : <span className=' dark:text-gray-300 text-gray-950'>20 Years</span></h2>
                     <h2 className='dark:text-gray-400 text-gray-700'>Nationality : <span className=' dark:text-gray-300 text-gray-950'>Indian</span></h2>
