@@ -6,7 +6,8 @@ import blindo from '../Assests/blindo.jpg'
 const Education = () => {
   return (
     <>
-      <div className='dark:text-white  max-w-[1080px] mx-auto mt-20 mb-5'>
+      <div id='education'
+      className='dark:text-white  max-w-[1080px] mx-auto mt-20 mb-5'>
         <h2 className='text-4xl font-semibold mt-2 text-center'><i className="fa-solid fa-graduation-cap"></i> My <span className='text-[#86198f] '>Education</span></h2>
         <p className='text-xl font-serif tracking-wider mt-2 text-center'>Education is not the learning of Facts, <br /> but The Training of The Mind to Think</p>
         <div className='flex flex-wrap justify-center gap-4'>

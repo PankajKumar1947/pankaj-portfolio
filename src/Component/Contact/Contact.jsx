@@ -5,7 +5,9 @@ import ContactCard from './ContactCard'
 const Contact = () => {
   return (
     <>
-      <div className='dark:text-white max-w-[1080px] overflow-x-hidden  mx-auto  mt-16 overflow-y-hidden'>
+      <div
+      id='contact'
+       className='dark:text-white max-w-[1080px] overflow-x-hidden  mx-auto  mt-16 overflow-y-hidden'>
         <h1 className='text-center text-4xl font-semibold' >Contact</h1>
         <p className='text-center opacity-50 mt-2'>Let's discuss your Queries !</p>
         <div className='flex gap-5 p-2 flex-wrap mt-6' data-aos="zoom-out">

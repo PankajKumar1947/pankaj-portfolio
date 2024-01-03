@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import MobileHeader from './MobileHeader'
 import { useState } from 'react'
 import useTheme from '../../context/theme'
@@ -30,62 +31,91 @@ const Header = () => {
                 <div>
                     <h1 className='text-3xl font-bold bg-gradient-to-r from-red-600 via-indigo-500 to-blue-600 inline-block text-transparent bg-clip-text'>Pankaj</h1>
                 </div>
-                <ul className='flex gap-1 md:gap-4 lg:gap-6 items-center  '>
+                <ul className="flex gap-1 md:gap-4 lg:gap-6 items-center text-orange-500">
                     <li >
-                        <NavLink
-                        to="/"
-                        className={({isActive})=>`${isActive ? "text-orange-500 underline underline-offset-4": "dark:text-white text-black"} cursor-pointer text-lg hover:text-orange-500 lg:block hidden`
-                        }
+                        <Link
+                        to="home" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-80} 
+                        duration={500} 
+                        activeClass="text-blue-500 dark:text-blue-400 underline underline-offset-4 "
+                        className="dark:text-white text-black hover:text-orange-500 dark:hover:text-orange-500 lg:block hidden cursor-pointer"
                         >Home
-                        </NavLink>
+                        </Link>
                     </li>
                     <li>
-                        <NavLink
-                        to="about"
-                        className={({isActive})=>`${isActive ? "text-orange-500 underline underline-offset-4": "dark:text-white text-black"} cursor-pointer text-lg }  hover:text-orange-500 lg:block hidden`}
+                        <Link
+                        to="about" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-70} 
+                        duration={500} 
+                        activeClass="text-blue-500 dark:text-blue-400 underline underline-offset-4 "
+                        className="dark:text-white text-black hover:text-orange-500 dark:hover:text-orange-500 lg:block hidden cursor-pointer"
                         >About
-                        </NavLink>
+                        </Link>
                     </li>
                     <li>
-                        <NavLink
-                        to={"education"}
-                        className={({isActive})=>`${isActive ? "text-orange-500 underline underline-offset-4": "dark:text-white text-black"} cursor-pointer text-lg}  hover:text-orange-500 lg:block hidden`}
+                        <Link
+                        to="education" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-80} 
+                        duration={500} 
+                        activeClass="text-blue-500 dark:text-blue-400 underline underline-offset-4 "
+                        className="dark:text-white text-black hover:text-orange-500 dark:hover:text-orange-500 lg:block hidden cursor-pointer"
                         >
                             Education
-                        </NavLink>
+                        </Link>
                     </li>
                     <li>
-                        <NavLink
-                        to={"skill"}
-                        className={({isActive})=>`${isActive ? "text-orange-500 underline underline-offset-4": "dark:text-white text-black"} cursor-pointer text-lg}  hover:text-orange-500 lg:block hidden`}
+                        <Link
+                        to="skill" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-25} 
+                        duration={500} 
+                        activeClass="text-blue-500 dark:text-blue-400 underline underline-offset-4 "
+                        className="dark:text-white text-black hover:text-orange-500 dark:hover:text-orange-500 lg:block hidden cursor-pointer"
                         >
                             Skills
-                        </NavLink>
+                        </Link>
                     </li>
                     <li>
-                        <NavLink
+                        <Link
                         to={"project"}
-                        className={({isActive})=>`${isActive ? "text-orange-500 underline underline-offset-4": "dark:text-white text-black"} cursor-pointer text-lg}  hover:text-orange-500 lg:block hidden`}
+                        spy={true} 
+                        smooth={true} 
+                        offset={-80} 
+                        duration={500} 
+                        activeClass="text-blue-500 dark:text-blue-400 underline underline-offset-4 "
+                        className="dark:text-white text-black hover:text-orange-500 dark:hover:text-orange-500 lg:block hidden cursor-pointer"
                         >
                             Project
-                        </NavLink>
+                        </Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <NavLink
                         to={"blog"}
-                        className={({isActive})=>`${isActive ? "text-orange-500 underline underline-offset-4": "dark:text-white text-black"} cursor-pointer text-lg}  hover:text-orange-500 lg:block hidden`}
+                        className={({isActive})=>`${isActive ? "text-orange-500 underline underline-offset-4": "dark:text-white text-black"} cursor-pointer text-lg}  hover:text-orange-500 dark:hover:text-orange-500 lg:block hidden`}
                         >
                             Blog
                         </NavLink>
-                    </li>
+                    </li> */}
                     
                     <li>
-                        <NavLink
-                        to={"contact"}
-                        className={({isActive})=>`${isActive ? "text-orange-500 underline underline-offset-4": "dark:text-white text-black"} cursor-pointer text-lg}  hover:text-orange-500 lg:block hidden`}
+                        <Link
+                         to={"contact"}
+                         spy={true} 
+                         smooth={true} 
+                         offset={-80} 
+                         duration={500} 
+                         activeClass="text-blue-500 dark:text-blue-400 underline underline-offset-4 "
+                         className="dark:text-white text-black hover:text-orange-500 dark:hover:text-orange-500 lg:block hidden cursor-pointercursor-pointer"
                         >
                             Contact
-                        </NavLink>
+                        </Link>
                     </li>
 
                     <li className='lg:block md:block hidden'>
