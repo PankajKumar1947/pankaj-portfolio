@@ -14,8 +14,8 @@ const Project = () => {
             {/* card added */}
             <div className='flex flex-wrap gap-10 lg:gap-4 justify-center items-center px-3'>
               {
-                projectData.map((item)=>{
-                  return <Card data={item}/>
+                projectData.map((item,i)=>{
+                  return <Card data={item} key={i}/>
                 })
               }
             </div>

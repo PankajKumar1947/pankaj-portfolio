@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import profilewhite from '../Assests/profileWhite.png'
+import leetcode from '../Assests/Leetcode.png';
 
 const About = () => {
   return (
@@ -21,13 +23,28 @@ const About = () => {
                     <li>I Have A Strong Background In Software Devlopment And Have Worked On a Wide Variety Of Projects.</li>
                 </ul>
 
-              <div className="mt-6 flex gap-3 justify-center text-xl">
-                <i className="fa-brands fa-facebook fa-lg text-[#005eff] cursor-pointer" ></i>
-                <i className="fa-brands fa-linkedin fa-lg hover:text-[#075ae9] cursor-pointer" ></i>
-                <i className="fa-solid fa-envelope fa-lg hover:text-[#187728] cursor-pointer" ></i>
-                <i className="fa-brands fa-square-x-twitter fa-lg hover:text-[#000000] cursor-pointer" ></i>
-                <i className="fa-brands fa-instagram fa-lg hover:text-[#e00083] cursor-pointer"  ></i>
-                <i className="fa-brands fa-youtube fa-lg hover:text-[#ff0000] cursor-pointer" ></i>
+              <div className="mt-6 flex gap-3 justify-center text-xl ">
+                <Link to={"https://leetcode.com/PankajKrY/"} className=' rounded-full'>
+                  <img src={leetcode} alt="" width={"30px"} height={"30px"}/>
+                </Link>
+                <Link to={""}>
+                  <i className="fa-brands fa-facebook fa-xl text-[#005eff] cursor-pointer" ></i>
+                </Link>
+                <Link to={"https://www.linkedin.com/in/pankaj-kumar-5bbb44268/"}>
+                <i className="fa-brands fa-linkedin fa-xl text-[#075ae9] cursor-pointer" ></i>
+                </Link>
+                <Link to={"https://github.com/PankajKumar1947"}>
+                  <i className="fa-brands fa-github fa-xl  cursor-pointer" ></i>
+                </Link>
+                <Link to={""}>
+                <i className="fa-brands fa-square-x-twitter fa-xl text-[#000000] cursor-pointer" ></i>
+                </Link>
+                <Link to={""}>
+                <i className="fa-solid fa-envelope fa-xl text-[#187728] cursor-pointer" ></i>
+                </Link>
+                <Link to={""}>
+                <i className="fa-brands fa-youtube fa-xl text-[#ff0000] cursor-pointer" ></i>
+                </Link>
               </div>
 
               <div className='w-full bg-gray-500 h-[1px] mt-6'></div>
