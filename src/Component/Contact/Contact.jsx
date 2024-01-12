@@ -1,8 +1,23 @@
 import React from 'react'
 import ContactCard from './ContactCard'
-
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  //send form data
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(import.meta.env.VITE_YOUR_SERVICE_ID, import.meta.env.VITE_YOUR_TEMPLATE_ID, form.current, import.meta.env.VITE_YOUR_PUBLIC_KEY)
+      .then((result) => {
+          e.target.reset();
+          alert("Message Sent Successfully")
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <>
       <div
@@ -20,23 +35,22 @@ const Contact = () => {
             </div>
 
             {/* right */}
-            <div className='flex  flex-wrap p-3 lg:p-5 dark:bg-gray-800 bg-white flex-1 gap-4 rounded-xl ' >
-              <div className='relative w-full lg:w-[48%]  '>
-                <i className="fa-solid fa-user  absolute left-3 top-5 transform -translate-y-1/2"></i>
-                <input type="text" placeholder='Name...'  className='bg-transparent border-2 border-gray-600  rounded-md  pl-9 py-2 w-full  '/>
-              </div>
-              <div className='relative w-full lg:w-[48%]  '>
-                <i className="fa-solid fa-envelope  absolute left-3 top-5 transform -translate-y-1/2"></i>
-                <input type="text" placeholder='Email...'  className='bg-transparent border-2 border-gray-600  rounded-md  pl-9 py-2 w-full  '/>
-              </div>
-              <div className='relative w-full h-[30%] lg:h-[50%]'>
-                <i className="fa-brands fa-rocketchat  absolute left-3 top-5 transform -translate-y-1/2"></i>
-                <textarea placeholder='Message...' className='w-[100%] bg-transparent border-2 border-gray-600 rounded-md py-1 h-full  pl-9 '/>
-              </div>
-              
-                {/* <textarea type="form" placeholder='Message...' className='w-[100%] bg-transparent border-2 border-gray-600  rounded-md  px-2 h-[30%] lg:h-[50%]' /> */}
-                <button className='bg-cyan-500 hover:bg-cyan-600 px-3  py-2 rounded-md '>Let's Talk</button>
-            </div>
+            
+              <form ref={form} onSubmit={sendEmail} className='flex  flex-wrap p-3 lg:p-5 dark:bg-gray-800 bg-white flex-1 gap-4 rounded-xl'>
+                <div className='relative w-full lg:w-[48%]  '>
+                  <i className="fa-solid fa-user  absolute left-3 top-5 transform -translate-y-1/2"></i>
+                  <input type="text" name="user_name" placeholder='Name...'  className='bg-transparent border-2 border-gray-600  rounded-md  pl-9 py-2 w-full  '/>
+                </div>
+                <div className='relative w-full lg:w-[48%]  '>
+                  <i className="fa-solid fa-envelope  absolute left-3 top-5 transform -translate-y-1/2"></i>
+                  <input type="text" name="user_email" placeholder='Email...'  className='bg-transparent border-2 border-gray-600  rounded-md  pl-9 py-2 w-full  '/>
+                </div>
+                <div className='relative w-full h-[30%] lg:h-[50%]'>
+                  <i className="fa-brands fa-rocketchat  absolute left-3 top-5 transform -translate-y-1/2"></i>
+                  <textarea placeholder='Message...' name="message" className='w-[100%] bg-transparent border-2 border-gray-600 rounded-md py-1 h-full  pl-9 '/>
+                </div>
+                  <input type='submit' value={"Let's Talk"} className='bg-cyan-500 hover:bg-cyan-600 px-3  py-2 rounded-md cursor-pointer'/>
+              </form>
         </div>
       </div>
     </>
