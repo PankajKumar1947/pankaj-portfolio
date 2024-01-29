@@ -2,9 +2,7 @@
 
 This project is built using React.js and Tailwind CSS to showcase my skills, projects, and experiences. Additionally, I have implemented a theme changer using the Context API to provide a seamless dark/light mode experience. To add a touch of interactivity, I've incorporated the AOS (Animate On Scroll) library for smooth animations on scroll.
 
-## Visit
-
-[**pankaj-portfolio**](https://pankaj-personal-portfolio.vercel.app/)
+## Visit : [**pankaj-portfolio**](https://pankaj-personal-portfolio.vercel.app/)
 
 ## Tech Stack Used
 
