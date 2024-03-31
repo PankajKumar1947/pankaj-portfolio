@@ -16,7 +16,7 @@ import github from '../Assests/logo/github.png'
 import nodejs from '../Assests/logo/nodejs.png'
 import dsa from '../Assests/logo/dsa.jpg'
 import mongodb from '../Assests/logo/mongodb.svg'
-import expressjs from '../Assests/logo/expressjs.png'
+import expressjs from '../Assests/logo/Expressjs.png'
 
 
 const Skill = () => {

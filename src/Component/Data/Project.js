@@ -9,7 +9,7 @@ import js from '../Assests/logo/js.png'
 import react from '../Assests/logo/react.png'
 import nodejs from '../Assests/logo/nodejs.png'
 import monogodb from '../Assests/logo/mongodb.svg'
-import expressjs from '../Assests/logo/expressjs.png'
+import expressjs from '../Assests/logo/Expressjs.png'
 
 const projectData=[
     {
