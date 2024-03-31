@@ -49,7 +49,7 @@ const Contact = () => {
                   <i className="fa-brands fa-rocketchat  absolute left-3 top-5 transform -translate-y-1/2"></i>
                   <textarea placeholder='Message...' name="message" className='w-[100%] bg-transparent border-2 border-gray-600 rounded-md py-1 h-full  pl-9 '/>
                 </div>
-                  <input type='submit' value={"Let's Talk"} className='bg-cyan-500 hover:bg-cyan-600 px-3  py-2 rounded-md cursor-pointer'/>
+                  <input type='submit' value={"Send"} className='bg-cyan-500 hover:bg-cyan-600 px-3  py-2 rounded-md cursor-pointer'/>
               </form>
         </div>
       </div>

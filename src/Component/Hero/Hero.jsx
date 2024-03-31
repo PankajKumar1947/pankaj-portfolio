@@ -1,5 +1,5 @@
 import React from 'react'
-import profile from '../Assests/profileWhite.png'
+import profile from '../Assests/dp_white.png'
 import {useTypewriter,Typewriter,Cursor} from 'react-simple-typewriter'
 
 const Hero = () => {
@@ -25,13 +25,17 @@ const Hero = () => {
                     </h1>
                 <p className='mt-4 dark:text-gray-400 text-gray-700'>I'm a Web developer and here is my Portfolio website.<br /> Here you'll learn about my journery as web developer and a Software Developer.</p>
                 <div className='flex gap-5 mt-5'>
-                    <button className='bg-indigo-600 hover:bg-blue-600 border-2 border-transparent px-4 text-white  py-1 rounded-md  '>Hire Me</button>
-                    <button className='border-2 px-4  py-1 rounded-md text-blue-500 font-semibold border-blue-600 hover:border-indigo-600 hover:text-indigo-400'>Download Resume</button>
+                    <a 
+                    href="mailto:pankaj.ky3007@gmailcom"
+                    className='bg-indigo-600 hover:bg-blue-600 cursor-pointer border-2 border-transparent px-4 text-white  py-1 rounded-md  '>Hire Me</a>
+                    <a 
+                    href='https://drive.google.com/file/d/123luSoyCVDj-fTXMMy6qTXCYRKU9xx2E/view?usp=sharing'
+                    className='border-2 px-4  py-1 rounded-md text-blue-500 font-semibold border-blue-600 hover:border-indigo-600 hover:text-indigo-400'>Download Resume</a>
                 </div>
             </div>
 
             {/* right */}
-            <div className='lg:w-[30%] md:w-[40%] w-[80%] rounded-full shadow-2xl shadow-blue-500'
+            <div className='lg:w-[33%] md:w-[40%] w-[60%] rounded-full shadow-2xl shadow-blue-500'
             data-aos="fade-left">
                 <img src={profile} alt="" className='w-[100%] rounded-full dark:bg-black bg-gray-400 shadow-2xl dark:shadow-blue-500 shadow-black'/>
                 

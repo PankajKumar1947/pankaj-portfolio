@@ -140,7 +140,7 @@ const Header = () => {
                     
                 
             </nav>
-            <div className='lg:hidden block'>
+            <div className='lg:hidden block '>
                {isOpen?<MobileHeader/>:""} 
             </div>        
                 

@@ -1,20 +1,22 @@
 import React from 'react'
 import SkillCard from './SkillCard'
-import bs from './logo/bootstrap.png'
-import tailwind from './logo/tailwind.png'
-import c from './logo/c.png'
-import cpp from './logo/cpp.png'
-import python from './logo/python.png'
-import html from './logo/html.png'
-import css from './logo/css.png'
-import js from './logo/js.png'
-import react from './logo/react.png'
-import npm from './logo/npm.png'
-import mysql from './logo/mysql.jpg'
-import git from './logo/git.png'
-import github from './logo/github.png'
-import nodejs from './logo/nodejs.png'
-import dsa from './logo/dsa.jpg'
+import bs from '../Assests/logo/bootstrap.png'
+import tailwind from '../Assests/logo/tailwind.png'
+import c from '../Assests/logo/c.png'
+import cpp from '../Assests/logo/cpp.png'
+import python from '../Assests/logo/python.png'
+import html from '../Assests/logo/html.png'
+import css from '../Assests/logo/css.png'
+import js from '../Assests/logo/js.png'
+import react from '../Assests/logo/react.png'
+import npm from '../Assests/logo/npm.png'
+import mysql from '../Assests/logo/mysql.jpg'
+import git from '../Assests/logo/git.png'
+import github from '../Assests/logo/github.png'
+import nodejs from '../Assests/logo/nodejs.png'
+import dsa from '../Assests/logo/dsa.jpg'
+import mongodb from '../Assests/logo/mongodb.svg'
+import expressjs from '../Assests/logo/expressjs.png'
 
 
 const Skill = () => {
@@ -42,6 +44,8 @@ const Skill = () => {
           <SkillCard logo={npm} name={"NPM"} />
           <SkillCard logo={mysql} name={"MySql"}/>
           <SkillCard logo={nodejs} name={"nodejs"}/>
+          <SkillCard logo={mongodb} name={"mongodb"}/>
+          <SkillCard logo={expressjs} name={"expressjs"}/>
       </div>
       
         

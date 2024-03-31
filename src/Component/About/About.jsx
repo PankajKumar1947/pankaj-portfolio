@@ -1,31 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import profilewhite from '../Assests/profileWhite.png'
-import leetcode from '../Assests/Leetcode.png';
+import profilewhite from '../Assests/dp_white.png'
+import { SiLeetcode } from "react-icons/si";
 
 const About = () => {
   return (
     <>
         <div id='about' 
-        className=' max-w-[1080px] mx-auto dark:text-white flex lg:flex-nowrap md:flex-nowrap mt-20 flex-wrap font-abc '>
+        className=' max-w-[1080px] mx-auto dark:text-white flex lg:flex-nowrap items-center gap-8 md:flex-nowrap mt-20 flex-wrap font-abc '>
             {/* left */}
-            <div className='lg:max-h-[80vh]  hidden lg:block md:block select-none' 
+            <div className='lg:max-h-[80vh] flex-1  hidden lg:block md:block select-none' 
             data-aos="fade-right">
                 
-                <img src={profilewhite} alt="" className='lg:h-[85%] h-[80%]  dark:bg-black bg-gray-400 rounded-2xl ' />
+                <img src={profilewhite} alt="" className='lg:h-[85%]   dark:bg-black bg-gray-400 rounded-2xl ' />
             </div>
             {/* right */}
-            <div className='lg:w-[65%] md:w-[55%] ' data-aos="fade-left">
+            <div className='lg:w-[60%] md:w-[55%] ' data-aos="fade-left">
                 <h2 className='text-3xl font-semibold underline underline-offset-8'>About <span className='text-[#86198f]'>Me</span></h2>
                 <ul className='leading-6 mt-4 dark:text-gray-300 list-disc pl-4 md:pl-0'>
-                    <li >Second-Year CSE Undergraduate Student At Asansol Engineering College.</li>
-                    <li>Along With A Wonderful Team, I Lead Various Projects, Hackathons And Communities. I am A Self-Taught Developer With a Passion for Web Developmetn And Problem Solving in Data Structure and Algorithm.</li>
-                    <li>I Have A Strong Background In Software Devlopment And Have Worked On a Wide Variety Of Projects.</li>
+                    <li >I am Pankaj Kumar, a second-year Computer Science and Engineering student at Asansol Engineering College.</li>
+                    <li>Proficient in full-stack development, working with Node.js, Express.js, and MongoDB for backend services. Experienced in frontend development with Reactjs, javascript,html,css and tailwind.</li>
+                    <li>I have solved over 450 data structures and algorithms problems on LeetCode using C++.</li>
+                    <li>Passionate about exploring machine learning algorithms, cybersecurity, and mobile app development.Eager to continue learning, growing as a developer, and contributing to impactful projects in the field of computer science.</li>
                 </ul>
 
               <div className="mt-6 flex gap-3 justify-center text-xl ">
-                <Link to={"https://leetcode.com/PankajKrY/"} className=' rounded-full'>
-                  <img src={leetcode} alt="" width={"30px"} height={"30px"}/>
+                <Link to={"https://leetcode.com/PankajKrY/"} className=' rounded-full text-3xl text-orange-400'>
+                  <SiLeetcode/>
                 </Link>
                 <Link to={""}>
                   <i className="fa-brands fa-facebook fa-xl text-[#005eff] cursor-pointer" ></i>
@@ -35,9 +36,6 @@ const About = () => {
                 </Link>
                 <Link to={"https://github.com/PankajKumar1947"}>
                   <i className="fa-brands fa-github fa-xl  cursor-pointer" ></i>
-                </Link>
-                <Link to={""}>
-                <i className="fa-brands fa-square-x-twitter fa-xl text-[#000000] cursor-pointer" ></i>
                 </Link>
                 <Link to={""}>
                 <i className="fa-solid fa-envelope fa-xl text-[#187728] cursor-pointer" ></i>
@@ -61,7 +59,9 @@ const About = () => {
 
              <div className='w-full bg-gray-500 h-[1px] mt-2'></div>
              <div className='flex gap-5 mt-5'>
-                <button className='bg-indigo-600 hover:bg-blue-600 text-white border-2 border-transparent px-4  py-1 rounded-md '>Let's Talk</button>
+                <a 
+                href='mailto:pankaj.ky3007@gmail.com'
+                className='bg-indigo-600 hover:bg-blue-600 text-white border-2 border-transparent px-4  py-1 rounded-md '>Let's Talk</a>
                 <button className='border-2 px-4  py-1 rounded-md text-blue-500 font-semibold border-blue-600 hover:border-green-600 hover:text-green-500'>More About Me </button>
             </div>
             </div>
