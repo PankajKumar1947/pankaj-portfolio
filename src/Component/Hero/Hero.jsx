@@ -3,7 +3,7 @@ import profile from '../Assests/dp_white.png'
 import {useTypewriter,Typewriter,Cursor} from 'react-simple-typewriter'
 
 const Hero = () => {
-    const text=["Frontend Developer","Designer","Coder","Learner"];
+    const text=["Full Stack Developer","Backend Developer","App Developer","Designer","Coder","Learner"];
 
   return (
     <>
@@ -29,8 +29,8 @@ const Hero = () => {
                     href="mailto:pankaj.ky3007@gmailcom"
                     className='bg-indigo-600 hover:bg-blue-600 cursor-pointer border-2 border-transparent px-4 text-white  py-1 rounded-md  '>Hire Me</a>
                     <a 
-                    href='https://drive.google.com/file/d/123luSoyCVDj-fTXMMy6qTXCYRKU9xx2E/view?usp=sharing'
-                    className='border-2 px-4  py-1 rounded-md text-blue-500 font-semibold border-blue-600 hover:border-indigo-600 hover:text-indigo-400'>Download Resume</a>
+                    href='https://drive.google.com/file/d/1JcO5KmdgVi4lN9v3VBkHMlGIVdvBSj_G/view?usp=sharing'
+                    className='border-2 px-4  py-1 rounded-md text-blue-500 font-semibold border-blue-600 hover:border-indigo-600 hover:text-indigo-400'>View Resume</a>
                 </div>
             </div>
 

@@ -29,8 +29,8 @@ const Contact = () => {
             {/* left */}
             <div className='flex flex-col gap-3'>
                 
-                <ContactCard name="Phone Number" value="8101865933" href="tel:+918101865933" icon="fa-solid fa-phone"/>
-                <ContactCard name="Email Address" value="pankaj.ky3007@gmail.com" href="mailto:pankaj.ky3007@gmailcom" icon="fa-solid fa-envelope" />
+                <ContactCard name="Phone Number" value="+91-XXXXXXXXXX" href="tel:+918101865933" icon="fa-solid fa-phone"/>
+                <ContactCard name="Email Address" value="click.12345@gmail.com" href="mailto:pankaj.ky3007@gmailcom" icon="fa-solid fa-envelope" />
                 <ContactCard name="Address" value="Asansol, West Bengal" href="https://maps.app.goo.gl/LjXYu15FdMgo91aB7" icon="fa-solid fa-location-dot"/>
             </div>
 
@@ -41,7 +41,7 @@ const Contact = () => {
                   <i className="fa-solid fa-user  absolute left-3 top-5 transform -translate-y-1/2"></i>
                   <input type="text" name="user_name" placeholder='Name...'  className='bg-transparent border-2 border-gray-600  rounded-md  pl-9 py-2 w-full  '/>
                 </div>
-                <div className='relative w-full lg:w-[48%]  '>
+                <div className='relative w-full lg:w-[49%]  '>
                   <i className="fa-solid fa-envelope  absolute left-3 top-5 transform -translate-y-1/2"></i>
                   <input type="text" name="user_email" placeholder='Email...'  className='bg-transparent border-2 border-gray-600  rounded-md  pl-9 py-2 w-full  '/>
                 </div>

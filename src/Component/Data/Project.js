@@ -1,7 +1,6 @@
 import insta from '../Assests/projects/insta.png'
-import careerCraft from '../Assests/projects/carrerCraft.png'
-import portfolio from '../Assests/projects/portfolio.png'
 import snapStudy from '../Assests/projects/snap-study.png'
+import mycodingnotes from '../Assests/projects/mycodingnotes.png'
 import tailwind from '../Assests/logo/tailwind.png'
 import html from '../Assests/logo/html.png'
 import css from '../Assests/logo/css.png'
@@ -10,6 +9,9 @@ import react from '../Assests/logo/react.png'
 import nodejs from '../Assests/logo/nodejs.png'
 import monogodb from '../Assests/logo/mongodb.svg'
 import expressjs from '../Assests/logo/Expressjs.png'
+import mysql from '../Assests/logo/mysql.jpg'
+import typescript from '../Assests/logo/typescript.png'
+import hono from '../Assests/logo/hono.png'
 
 const projectData=[
     {
@@ -27,16 +29,18 @@ const projectData=[
         ],
     },
     {
-        title:"Personal Portfolio",
-        desc:"Portfolio website to showcase a collection of projects, skills, and professional experiences.",
-        img:portfolio,
-        liveLink:"https://pankaj-personal-portfolio.vercel.app/",
-        repoLink:"https://github.com/PankajKumar1947/pankaj-portfolio",
+        title:"MyCodingNotes",
+        desc:"A plateform to create, read, share with anyone. An educator can creates notes and can share with the students",
+        img:mycodingnotes,
+        liveLink:"https://mycodingnotes.vercel.app/",
+        repoLink:"https://github.com/PankajKumar1947/mycodingnotes-project",
         tech:[
+            mysql,
             react,
+            typescript,
+            hono,
+            nodejs,
             tailwind,
-            css,
-            html,
         ],
     },
     {
@@ -51,20 +55,6 @@ const projectData=[
             css,
             js
 
-        ],
-    },
-    
-    {
-        title:"Career-Craft",
-        desc:"Carrer-Craft an Educational website for Online course.",
-        img:careerCraft,
-        liveLink:"https://career-craft-rose.vercel.app/",
-        repoLink:"https://github.com/PankajKumar1947/Career-Craft",
-        tech:[
-            html,
-            css,
-            react,
-            tailwind
         ],
     },
 ]

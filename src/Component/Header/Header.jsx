@@ -31,7 +31,7 @@ const Header = () => {
                 <div>
                     <h1 className='text-3xl font-bold bg-gradient-to-r from-red-600 via-indigo-500 to-blue-600 inline-block text-transparent bg-clip-text'>Pankaj</h1>
                 </div>
-                <ul className="flex gap-1 md:gap-4 lg:gap-6 items-center text-orange-500">
+                <ul className="flex gap-1 md:gap-4 lg:gap-6 items-center">
                     <li >
                         <Link
                         to="home" 
@@ -40,7 +40,7 @@ const Header = () => {
                         offset={-80} 
                         duration={500} 
                         activeClass="text-blue-500 dark:text-blue-400 underline underline-offset-4 "
-                        className="dark:text-white text-black hover:text-orange-500 dark:hover:text-orange-500 lg:block hidden cursor-pointer"
+                        className="lg:block hidden cursor-pointer hover:text-blue-500"
                         >Home
                         </Link>
                     </li>
@@ -52,7 +52,7 @@ const Header = () => {
                         offset={-70} 
                         duration={500} 
                         activeClass="text-blue-500 dark:text-blue-400 underline underline-offset-4 "
-                        className="dark:text-white text-black hover:text-orange-500 dark:hover:text-orange-500 lg:block hidden cursor-pointer"
+                        className="lg:block hidden cursor-pointer hover:text-blue-500"
                         >About
                         </Link>
                     </li>
@@ -64,7 +64,7 @@ const Header = () => {
                         offset={-80} 
                         duration={500} 
                         activeClass="text-blue-500 dark:text-blue-400 underline underline-offset-4 "
-                        className="dark:text-white text-black hover:text-orange-500 dark:hover:text-orange-500 lg:block hidden cursor-pointer"
+                        className="lg:block hidden cursor-pointer hover:text-blue-500"
                         >
                             Education
                         </Link>
@@ -77,7 +77,7 @@ const Header = () => {
                         offset={-25} 
                         duration={500} 
                         activeClass="text-blue-500 dark:text-blue-400 underline underline-offset-4 "
-                        className="dark:text-white text-black hover:text-orange-500 dark:hover:text-orange-500 lg:block hidden cursor-pointer"
+                        className="lg:block hidden cursor-pointer hover:text-blue-500"
                         >
                             Skills
                         </Link>
@@ -87,10 +87,10 @@ const Header = () => {
                         to={"project"}
                         spy={true} 
                         smooth={true} 
-                        offset={-80} 
+                        offset={0} 
                         duration={500} 
                         activeClass="text-blue-500 dark:text-blue-400 underline underline-offset-4 "
-                        className="dark:text-white text-black hover:text-orange-500 dark:hover:text-orange-500 lg:block hidden cursor-pointer"
+                        className="lg:block hidden cursor-pointer hover:text-blue-500"
                         >
                             Project
                         </Link>
@@ -106,13 +106,13 @@ const Header = () => {
                     
                     <li>
                         <Link
-                         to={"contact"}
-                         spy={true} 
-                         smooth={true} 
-                         offset={-80} 
-                         duration={500} 
-                         activeClass="text-blue-500 dark:text-blue-400 underline underline-offset-4 "
-                         className="dark:text-white text-black hover:text-orange-500 dark:hover:text-orange-500 lg:block hidden cursor-pointercursor-pointer"
+                        to={"contact"}
+                        spy={true} 
+                        smooth={true} 
+                        offset={-80} 
+                        duration={500} 
+                        activeClass="text-blue-500 dark:text-blue-400 underline underline-offset-4 "
+                        className="lg:block hidden cursor-pointer hover:text-blue-500"
                         >
                             Contact
                         </Link>

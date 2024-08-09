@@ -9,6 +9,7 @@ import Contact from '../Contact/Contact'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
+import Mywork from '../Mywork/Mywork'
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
         <About/>
         <Education/>
         <Skill/>
+        <Mywork/>
         <Project/>
         <Contact/>
     </>
