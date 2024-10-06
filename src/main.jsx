@@ -10,6 +10,7 @@ import Project from './Component/Project/Project.jsx'
 import Contact from './Component/Contact/Contact.jsx'
 import Error from './Component/Error/Error.jsx'
 import Home from './Component/Home/Home'
+import { Analytics } from '@vercel/analytics/react'
 
 
 
@@ -54,6 +55,7 @@ const router=createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Analytics />
     <RouterProvider router={router}/>
   </React.StrictMode>,
 )
