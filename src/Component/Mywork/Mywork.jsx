@@ -12,7 +12,7 @@ const experiences = [
     description: [
       ' Built and maintained web interfaces using ReactJS, Tailwind CSS, and Redux Toolkit based on Figma designs, ensuring responsiveness and optimization.',
       'Integrated frontend with backend via Swagger files, collaborating with backend developers to enhance API functionality and data flow.',
-      'Improved development processes through code reviews and effective team communication.',
+      'Integrated the Google Maps API to fetch precise locations within a specified range and implemented Razorpay for seamless order processing.',
     ],
   },
   {
