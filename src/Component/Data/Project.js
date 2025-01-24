@@ -13,48 +13,109 @@ import mysql from '../Assests/logo/mysql.jpg'
 import typescript from '../Assests/logo/typescript.png'
 import hono from '../Assests/logo/hono.png'
 
+const techData = {
+    react:{
+        name:"React",
+        logo:react,
+    },
+    tailwind:{
+        name:"Tailwind",
+        logo:tailwind,
+    },
+    nodejs:{
+        name:"Nodejs",
+        logo:nodejs,
+    },
+    monogodb:{
+        name:"Monogodb",
+        logo:monogodb,
+    },
+    expressjs:{
+        name:"Expressjs",
+        logo:expressjs,
+    },
+    mysql:{
+        name:"MySql",
+        logo:mysql,
+    },
+    typescript:{
+        name:"Typescript",
+        logo:typescript,
+    },
+    hono:{
+        name:"Hono",
+        logo:hono,
+    },
+    html:{
+        name:"HTML",
+        logo:html,
+    },
+    css:{
+        name:"CSS",
+        logo:css,
+    },
+    js:{
+        name:"Javascript",
+        logo:js,
+    },
+}
+
 const projectData=[
     {
         title:"FullStack-Instagram",
-        desc:"FullStack Instagram Clone using monogodb,react,expressjs,nodejs and tailwind",
+        desc:[
+            "Frontend: React.js with user authentication, post creation, likes, comments ,bookmarks.",
+            "Backend: Node.js/Express.js, MongoDB for data storage.",
+            "Additional features: JWT authentication, profile updation, follow, unfollow, image uploading, etc.",
+            "Deployment: Frontend and backend both are deployed on vercel."
+        ],
         img:insta,
         liveLink:"https://insta-clone-mern.vercel.app/",
         repoLink:"https://github.com/PankajKumar1947/FullStack-Instagram-Clone",
         tech:[
-            monogodb,
-            react,
-            expressjs,
-            nodejs,
-            tailwind,
+            techData.mysql,
+            techData.react,
+            techData.tailwind,
+            techData.nodejs,
+            techData.expressjs,
+            techData.monogodb
         ],
     },
     {
         title:"MyCodingNotes",
-        desc:"A plateform to create, read, share with anyone. An educator can creates notes and can share with the students",
+        desc:[
+            "Developed a web platform, MyCodingNotes, enabling users to create, share, and store notes using markdown with multi-page support.",
+            "Integrated user authentication for secure access and note-sharing, while providing privacy controls for managing content.",
+            "The platform also provides a user-friendly, responsive interface for seamless navigation and note management across devices."
+        ],
         img:mycodingnotes,
         liveLink:"https://mycodingnotes.vercel.app/",
         repoLink:"https://github.com/PankajKumar1947/mycodingnotes-project",
         tech:[
-            mysql,
-            react,
-            typescript,
-            hono,
-            nodejs,
-            tailwind,
+            techData.mysql,
+            techData.react,
+            techData.tailwind,
+            techData.nodejs,
+            techData.expressjs,
+            techData.monogodb
         ],
     },
     {
         title:"SnapStudy",
-        desc:"academic resources available to engineering students for upcoming semester exams",
+        desc:[
+            "SnapStudy, a platform designed to enhance the academic resources available to engineering students for upcoming semester exams.",
+            "Frontend: React js with react-router-dom, Tailwind for styling, Integrated JSON Data for dynamic content rendering.",
+            "Data: Utilized GitHub hosting for JSON data, enabling easy updates and maintenance .",
+            "Pdfs are stored in Drive and links generated are kept in json format and hosted on Github pages"
+        ],
         img:snapStudy,
         liveLink:"https://github.com/PankajKumar1947/snap-study",
         repoLink:"https://github.com/PankajKumar1947/snap-study",
         tech:[
-            react,
-            tailwind,
-            css,
-            js
-
+            techData.react,
+            techData.tailwind,
+            techData.css,
+            techData.js
         ],
     },
 ]
