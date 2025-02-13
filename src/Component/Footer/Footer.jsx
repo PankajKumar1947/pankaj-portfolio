@@ -5,7 +5,8 @@ import leetcode from '../Assests/Leetcode.png';
 const Footer = () => {
   return (
     <>
-        <div className='  dark:text-white flex flex-col justify-center items-center bottom-0 pb-5 dark:bg-gray-800 bg-gray-300 mt-10'>
+        <div className='dark:text-white flex flex-col justify-center items-center bottom-0 mt-10 max-w-[1080px] mx-auto'>
+        <div className='w-[70%] bg-gray-500 h-[1px] mt-6'></div>
             <h1 className='text-center text-3xl font-extrabold mt-5'>Pankaj</h1>
             <ul className='flex flex-wrap gap-1.5 md:gap-3 lg:gap-4 mt-3 text-sm'>
                 <li><Link to={"/"} className='hover:underline underline-offset-2 hover:text-blue-400'>Home</Link></li>
@@ -39,12 +40,10 @@ const Footer = () => {
                 </Link>
               </div>
 
-              <div className='w-full bg-gray-500 h-[1px] mt-6'></div>
-
-              <p className='mt-2'>Copyright  2023 : All right reserved</p>
-              
+              <p className='mt-2'>Copyright  2023 : All right reserved</p> 
+              <p className='flex justify-center items-center gap-1 p-2 dark:bg-gray-900 dark:text-cyan-400 bg-gray-400 w-full mt-4'>Designed with ❤️ by Pankaj </p>
         </div>
-        <p className='flex justify-center items-center gap-1 p-2 dark:bg-gray-900 dark:text-cyan-400 bg-gray-400 w-full'>Designed with ❤️ by Pankaj </p>
+        
     </>
   )
 }
