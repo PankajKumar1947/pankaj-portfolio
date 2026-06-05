@@ -5,15 +5,11 @@ import {
   Lock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import type { INote, INotePage } from "@/types/note.types";
+import type { NotionNote } from "@/services/notion.service";
 import { cn } from "@/lib/utils";
 
 interface NoteCardProps {
-  note: INote;
-}
-
-function isNotePage(page: INote["pages"][number]): page is INotePage {
-  return typeof page === "object" && page !== null && "title" in page;
+  note: NotionNote;
 }
 
 export function NoteCard({ note }: NoteCardProps) {
@@ -71,7 +67,7 @@ export function NoteCard({ note }: NoteCardProps) {
             )}
           >
             {hasPages ? (
-              <Link href={`/notes/${note.slug}`}>
+              <Link href={`/notes/${note.slug}/${note.pages[0]._id}`}>
                 <ArrowRight className="h-4 w-4" />
               </Link>
             ) : (

@@ -1,8 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
-import { connectDB } from "@/lib/db";
-import { getPublishedBlogsService } from "@/services/blog.service";
-import { getPublishedNotesService } from "@/services/note.service";
+import { getNotionPosts, getNotionNotes } from "@/services/notion.service";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = siteConfig.url;
@@ -35,24 +33,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Dynamic routes from database
-  await connectDB();
-
+  // Dynamic routes from Notion
   const [blogs, notes] = await Promise.all([
-    getPublishedBlogsService(),
-    getPublishedNotesService(),
+    getNotionPosts(),
+    getNotionNotes(),
   ]);
 
   const blogRoutes: MetadataRoute.Sitemap = blogs.map((blog) => ({
     url: `${baseUrl}/blog/${blog.slug}`,
-    lastModified: blog.updatedAt || blog.createdAt,
+    lastModified: new Date(blog.publishedAt),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
   const noteRoutes: MetadataRoute.Sitemap = notes.map((note) => ({
     url: `${baseUrl}/notes/${note.slug}`,
-    lastModified: note.updatedAt || note.createdAt,
+    lastModified: new Date(note.updatedAt || note.createdAt),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NotePageViewer } from "../_components/note-page-viewer";
-import { connectDB } from "@/lib/db";
-import { getNoteBySlugService } from "@/services/note.service";
+import { getNotionNoteBySlug } from "@/services/notion.service";
 import { profile } from "@/config/profile";
 
 interface NotePageProps {
@@ -13,8 +12,7 @@ export async function generateMetadata({
   params,
 }: NotePageProps): Promise<Metadata> {
   const { slug } = await params;
-  await connectDB();
-  const note = await getNoteBySlugService(slug);
+  const note = await getNotionNoteBySlug(slug);
 
   if (!note) {
     return { title: "Note Not Found" };
@@ -42,14 +40,12 @@ export async function generateMetadata({
 
 export default async function NotePage({ params }: NotePageProps) {
   const { slug, pageId } = await params;
-  await connectDB();
-  const note = await getNoteBySlugService(slug);
+  const note = await getNotionNoteBySlug(slug);
 
   if (!note) {
     notFound();
   }
 
-  const serializedNote = JSON.parse(JSON.stringify(note));
-
-  return <NotePageViewer note={serializedNote} initialPageId={pageId} />;
+  return <NotePageViewer note={note as any} initialPageId={pageId} />;
 }
+

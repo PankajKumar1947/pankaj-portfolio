@@ -1,23 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import axiosInstance from "@/services/api/axios";
 import { blogQueries } from "@/react-query/blog";
-import { IBlog } from "@/types/blog.types";
+import type { BlogPost } from "@/services/notion.service";
 
 export const useBlogs = () => {
   return useQuery({
     queryKey: blogQueries.all.key,
     queryFn: async () => {
-      const response = await axiosInstance.get<IBlog[]>(blogQueries.all.endpoint);
-      return response.data;
-    },
-  });
-};
-
-export const usePublishedBlogs = () => {
-  return useQuery({
-    queryKey: blogQueries.published.key,
-    queryFn: async () => {
-      const response = await axiosInstance.get<IBlog[]>(blogQueries.published.endpoint);
+      const response = await axiosInstance.get<BlogPost[]>(blogQueries.all.endpoint);
       return response.data;
     },
   });
@@ -25,22 +15,11 @@ export const usePublishedBlogs = () => {
 
 export const useBlog = (slug: string) => {
   return useQuery({
-    queryKey: blogQueries.details(slug).key,
+    queryKey: blogQueries.bySlug(slug).key,
     queryFn: async () => {
-      const response = await axiosInstance.get<IBlog>(blogQueries.details(slug).endpoint);
+      const response = await axiosInstance.get<BlogPost>(blogQueries.bySlug(slug).endpoint);
       return response.data;
     },
     enabled: !!slug,
-  });
-};
-
-export const useAdminBlog = (id: string) => {
-  return useQuery({
-    queryKey: blogQueries.update(id).key,
-    queryFn: async () => {
-      const response = await axiosInstance.get<IBlog>(blogQueries.update(id).endpoint);
-      return response.data;
-    },
-    enabled: !!id,
   });
 };

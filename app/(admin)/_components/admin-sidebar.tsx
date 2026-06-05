@@ -31,8 +31,6 @@ import { useAuthSession } from "@/hooks/query/use-auth";
 const adminNavItems = [
   { title: "Dashboard", icon: LayoutDashboard, href: "/admin" },
   { title: "Planner", icon: CalendarDays, href: "/admin/planner" },
-  { title: "Blogs", icon: FileText, href: "/admin/blogs" },
-  { title: "Notes", icon: BookOpen, href: "/admin/notes" },
   { title: "Projects", icon: FolderKanban, href: "/admin/projects" },
   { title: "Messages", icon: Mail, href: "/admin/contacts" },
 ];
