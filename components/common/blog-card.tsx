@@ -1,38 +1,52 @@
 "use client";
 
 import Link from "next/link";
-import { IBlog } from "@/types/blog.types";
+import { BlogPost } from "@/services/notion.service";
 import { motion } from "motion/react";
+import { Card } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
 
 interface BlogCardProps {
-  post: IBlog;
+  post: BlogPost;
   index: number;
 }
 
 export function BlogCard({ post, index }: BlogCardProps) {
-  const formattedDate = new Date(post.createdAt).toLocaleDateString("en-US", {
+  const formattedDate = new Date(post.publishedAt).toLocaleDateString("en-US", {
     month: "short",
-    day: "2-digit",
+    day: "numeric",
     year: "numeric",
   });
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: -10 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.05 }}
-      className="group flex items-baseline gap-3 py-1"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.4, 0, 0.2, 1] }}
+      className="flex h-full w-full"
     >
-      <span className="text-muted-foreground/40">•</span>
-      <span className="italic tracking-tighter text-muted-foreground/80">
-        {formattedDate}
-      </span>
-      <span className="text-muted-foreground/40">:</span>
-      <Link
-        href={`/blog/${post.slug}`}
-        className="font-medium text-primary hover:underline"
-      >
-        {post.title}
+      <Link href={`/blog/${post.slug}`} className="block h-full w-full group">
+        <Card className="relative h-full w-full overflow-hidden border border-border/40 bg-card/40 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:bg-card/60 p-6 sm:p-8 rounded-2xl flex flex-col gap-4">
+          <h3 className="text-xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">
+            {post.title}
+          </h3>
+          
+          <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground/70">
+            {post.brief}
+          </p>
+          
+          <div className="flex items-center justify-between gap-2 pt-2 mt-auto">
+            <div className="flex items-center gap-2 text-xs text-muted-foreground/50 font-medium">
+              <span>{formattedDate}</span>
+              <span>•</span>
+              <span>{post.readTimeInMinutes} min read</span>
+            </div>
+            
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/5 text-primary opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+              <ArrowRight className="h-4 w-4" />
+            </div>
+          </div>
+        </Card>
       </Link>
     </motion.div>
   );

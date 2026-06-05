@@ -1,19 +1,28 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { HashnodeBlogViewer } from "./_components/hashnode-blog-viewer";
-import { getHashnodePost } from "@/services/hashnode.service";
-import { siteConfig } from "@/config/site";
+import { BlogViewer } from "./_components/blog-viewer";
+import { getNotionPost, type BlogPost } from "@/services/notion.service";
 import { profile } from "@/config/profile";
 
-interface HashnodeBlogDetailPageProps {
+interface BlogDetailPageProps {
   params: Promise<{ slug: string }>;
+}
+
+async function fetchBlog(slug: string): Promise<BlogPost | null> {
+  try {
+    const res = await getNotionPost(slug);
+    if (res) return res;
+  } catch (error) {
+    // Fallback to service directly if API fetch fails (e.g. during build-time pre-rendering)
+  }
+  return await getNotionPost(slug);
 }
 
 export async function generateMetadata({
   params,
-}: HashnodeBlogDetailPageProps): Promise<Metadata> {
+}: BlogDetailPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getHashnodePost(slug);
+  const post = await fetchBlog(slug);
 
   if (!post) {
     return { title: "Blog Post Not Found" };
@@ -23,7 +32,7 @@ export async function generateMetadata({
   const description = post.brief;
 
   return {
-    title: `${title} | Hashnode Blog`,
+    title: `${title} | Blog`,
     description,
     openGraph: {
       title: `${title} | ${profile.name}`,
@@ -42,15 +51,17 @@ export async function generateMetadata({
   };
 }
 
-export default async function HashnodeBlogDetailPage({
+export default async function BlogDetailPage({
   params,
-}: HashnodeBlogDetailPageProps) {
+}: BlogDetailPageProps) {
   const { slug } = await params;
-  const post = await getHashnodePost(slug);
+  const post = await fetchBlog(slug);
 
   if (!post) {
     notFound();
   }
 
-  return <HashnodeBlogViewer post={post} />;
+  return <BlogViewer post={post} />;
 }
+
+

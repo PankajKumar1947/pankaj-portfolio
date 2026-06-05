@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { profile } from "@/config/profile";
 import { ThemeToggle } from "@/components/common/theme-toggle";
-import { HashnodePost } from "@/services/hashnode.service";
+import { BlogPost } from "@/services/notion.service";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -18,11 +18,11 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { Copy, Check, Eye, Heart, MessageSquare, ExternalLink, Clock } from "lucide-react";
+import { Copy, Check, Clock } from "lucide-react";
 import { useState } from "react";
 
-interface HashnodeBlogViewerProps {
-  post: HashnodePost;
+interface BlogViewerProps {
+  post: BlogPost;
 }
 
 const CopyButton = ({ content }: { content: string }) => {
@@ -54,21 +54,14 @@ const CopyButton = ({ content }: { content: string }) => {
   );
 };
 
-export function HashnodeBlogViewer({ post }: HashnodeBlogViewerProps) {
+export function BlogViewer({ post }: BlogViewerProps) {
   const formattedDate = new Date(post.publishedAt).toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
     year: "numeric",
   });
 
-  const hashnodeHost = (profile as { hashnodeHost?: string }).hashnodeHost || "pankajkry.hashnode.dev";
-  const hashnodeUrl = `https://${hashnodeHost}/${post.slug}`;
-
-  // Fix Hashnode-specific image syntax: ![](url align="center") -> ![](url)
-  const processedMarkdown = (post.content?.markdown || "").replace(
-    /!\[(.*?)\]\((.*?) align="center"\)/g,
-    "![$1]($2)"
-  );
+  const markdownContent = post.content?.markdown || "";
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -223,59 +216,11 @@ export function HashnodeBlogViewer({ post }: HashnodeBlogViewerProps) {
                   },
                 }}
               >
-                {processedMarkdown}
+                {markdownContent}
               </ReactMarkdown>
             </div>
 
             <div className="space-y-12 pt-10">
-              {/* Bottom Stats Row (Small Pills) */}
-              <div className="flex items-center justify-center gap-3 py-6">
-                <div className="flex items-center gap-1.5 bg-muted/30 px-3 py-1.5 rounded-full border border-border/50 text-xs font-medium text-muted-foreground/80">
-                  <Eye className="h-3.5 w-3.5" />
-                  <span>{post.views} views</span>
-                </div>
-                <div className="flex items-center gap-1.5 bg-muted/30 px-3 py-1.5 rounded-full border border-border/50 text-xs font-medium text-muted-foreground/80">
-                  <Heart className="h-3.5 w-3.5" />
-                  <span>{post.reactionCount} likes</span>
-                </div>
-                <div className="flex items-center gap-1.5 bg-muted/30 px-3 py-1.5 rounded-full border border-border/50 text-xs font-medium text-muted-foreground/80">
-                  <MessageSquare className="h-3.5 w-3.5" />
-                  <span>{post.responseCount} comments</span>
-                </div>
-              </div>
-
-              {/* Comments CTA */}
-              <div className="rounded-3xl border border-border/50 bg-linear-to-b from-card/50 to-background/50 p-8 sm:p-12 text-center shadow-xl">
-                <div className="max-w-md mx-auto space-y-6">
-                  <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-2">
-                    <MessageSquare className="h-8 w-8" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">Community Discussion</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {post.responseCount > 0
-                        ? `There are already ${post.responseCount} comments on this post. Join the conversation and share your thoughts!`
-                        : "Be the first to comment! Share your feedback or questions about this article."}
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                    <Button asChild size="lg" className="rounded-full px-8 gap-2 h-12">
-                      <a href={`${hashnodeUrl}#comments`} target="_blank" rel="noopener noreferrer">
-                        Add a comment
-                        <MessageSquare className="h-4 w-4" />
-                      </a>
-                    </Button>
-                    <Button asChild variant="outline" size="lg" className="rounded-full px-8 gap-2 h-12 border-primary/20 hover:border-primary transition-all">
-                      <a href={hashnodeUrl} target="_blank" rel="noopener noreferrer">
-                        Read all comments
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
-                    </Button>
-                  </div>
-                </div>
-              </div>
-
               {/* Author Info */}
               <div className="flex flex-col sm:flex-row items-center gap-6 p-8 rounded-3xl bg-muted/20 border border-border/50">
                 <Avatar className="h-20 w-20 border-4 border-primary/10">
@@ -287,15 +232,9 @@ export function HashnodeBlogViewer({ post }: HashnodeBlogViewerProps) {
                   <h4 className="text-xl font-bold text-foreground mb-1">{profile.name}</h4>
                   <p className="text-muted-foreground text-sm mb-4">{profile.tagline}</p>
                   <p className="text-xs text-muted-foreground/60 leading-relaxed max-w-xl">
-                    Software Engineer and technical writer sharing insights on modern web development.
-                    Follow me for more tutorials and deep dives.
+                    Software Engineer sharing knowledge on web development. Follow along on my coding journey!
                   </p>
                 </div>
-                <Button asChild variant="outline" size="sm" className="rounded-full gap-2">
-                  <a href={`https://${hashnodeHost}`} target="_blank" rel="noopener noreferrer">
-                    Follow
-                  </a>
-                </Button>
               </div>
             </div>
           </article>
