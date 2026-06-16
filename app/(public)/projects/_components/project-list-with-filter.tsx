@@ -3,7 +3,6 @@
 import * as React from "react";
 import { ProjectCard } from "@/components/common/project-card";
 import { TagFilter } from "./tag-filter";
-
 import { IProject } from "@/types/project.types";
 
 interface ProjectListWithFilterProps {
