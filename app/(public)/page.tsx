@@ -56,9 +56,9 @@ export default function HomePage() {
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Button size="lg" asChild>
-                  <a 
-                    href="https://drive.google.com/file/d/1O0VJfUAey8TV20q2-a189AukFDUX4MBD/view" 
-                    target="_blank" 
+                  <a
+                    href="https://drive.google.com/file/d/1O0VJfUAey8TV20q2-a189AukFDUX4MBD/view"
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     View Resume
@@ -71,7 +71,7 @@ export default function HomePage() {
                     Get in Touch
                   </a>
                 </Button>
-                
+
                 <div className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-border/50 bg-muted/30 text-sm text-muted-foreground transition-colors hover:bg-muted/50">
                   <MapPin className="h-4 w-4 text-primary" />
                   {profile.location}
@@ -276,7 +276,7 @@ export default function HomePage() {
                           target="_blank"
                           className="font-semibold text-sm hover:text-primary transition-colors"
                         >
-                          Github
+                          View Profile
                         </a>
                       </div>
                     </div>
