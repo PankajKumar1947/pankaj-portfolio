@@ -4,6 +4,8 @@ import { InfiniteBlogs } from "@/components/common/infinite-blogs";
 import { getNotionPosts } from "@/services/notion.service";
 import { siteConfig } from "@/config/site";
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: `My Blog | ${siteConfig.name}`,
   description: "Read my latest articles and thoughts on web development.",
